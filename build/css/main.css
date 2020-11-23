@@ -721,7 +721,8 @@ body {
         align-items: center;
     -ms-flex-pack: center;
         justify-content: center;
-    height: 100%; }
+    height: calc(100% - 28px);
+    min-height: 360px; }
   .mob-menu .ul > li {
     font-size: 22px;
     line-height: 28px;
@@ -772,7 +773,19 @@ body {
       color: #B57834;
       font-weight: bold;
       font-size: 18px;
-      line-height: 23px; } }
+      line-height: 23px; }
+  .mob-menu__bot {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px; }
+    .mob-menu__bot img {
+      margin-right: 26px; } }
 
 @media (max-width: 869px) {
   .f-logo img {
@@ -934,7 +947,7 @@ body {
   .level2 {
     padding: 20px 20px; } }
 
-@media (max-width: 375px) {
+@media (max-width: 374px) {
   .header {
     height: 70px; }
   .first-section {

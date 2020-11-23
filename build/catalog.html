@@ -9,6 +9,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='./libs/bootstrap/bootstrap.min.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./libs/fullpage/fullpage.min.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./libs/fancybox/fancybox.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./libs/selectric/selectric.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/main.min.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/page.min.css'>
 </head>
@@ -151,26 +152,138 @@
 
         <main class="main">
             <div class="container-1269">
-                <div class="categorii">
-                    <a href="" class="categorii__item" style="background-image: url('../img/main/c1.jpg');">
-                        <div class="categorii__name">Продукты пчеловодства</div>
+                <div class="catalog">
+                    <a class="banner" href="">
+                        <img src="./img/catalog/baner.jpg">
                     </a>
-                    <a href="" class="categorii__item" style="background-image: url('../img/main/c2.jpg');">
-                        <div class="categorii__name">Хвойная продукция</div>
-                    </a>
-                    <a href="" class="categorii__item" style="background-image: url('../img/main/c3.jpg');">
-                        <div class="categorii__name">бальзамы/настойки</div>
-                    </a>
-                    <a href="" class="categorii__item" style="background-image: url('../img/main/c4.jpg');">
-                        <div class="categorii__name">косметическая продукция</div>
-                    </a>
-                    <a href="" class="categorii__item" style="background-image: url('../img/main/c5.jpg');">
-                        <div class="categorii__name">травы</div>
-                    </a>
-                    <a href="" class="categorii__item" style="background-image: url('../img/main/c6.jpg');">
-                        <div class="categorii__name">фиточай</div>
-                    </a>
+                    <h1>косметическая продукция</h1>
+                    <div class="catalog__wrap">
+                        <div class="catalog__filter">
+                            <div class="catalog__filter__item active">
+                                <div class="catalog__filter__title">Категория товара <span>-</span><span class="plus">+</span></div>
+                                <div class="catalog__filter__wrap">
+                                    <ul>
+                                        <li><a href="">Продукты пчеловодства</a></li>
+                                        <li><a href="">Хвойная продукция</a></li>
+                                        <li><a href="">Бальзамы/настойки</a></li>
+                                        <li><a href="">Пантовая продукция</a></li>
+                                        <li><a href="">Косметическая продукция</a></li>
+                                        <li><a href="">Продукция животного происхождения</a></li>
+                                        <li><a href="">Минеральные пищевые добавки</a></li>
+                                        <li><a href="">Травы</a></li>
+                                        <li><a href="">Фитосборы</a></li>
+                                        <li><a href="">Грибные лечебные препараты</a></li>
+                                        <li><a href="">Оздоровительная программа</a></li>
+                                    </div>
+                                </ul>
+                            </div>
+                            <div class="catalog__filter__item active">
+                                <div class="catalog__filter__title">Болезнь <span>-</span><span class="plus">+</span></div>
+                                <div class="catalog__filter__wrap">
+                                    <form class="catalog__form">
+                                        <div class="catalog__form__item">
+                                            <input type="radio" id="radio1" name="catalog-radio" checked>
+                                            <label for="radio1">Простуда</label>
+                                        </div>
+                                        <div class="catalog__form__item">
+                                            <input type="radio" id="radio2"  name="catalog-radio" >
+                                            <label for="radio2">Простуда</label>
+                                        </div>
+                                        <div class="catalog__form__item">
+                                            <input type="radio" id="radio3"  name="catalog-radio" >
+                                            <label for="radio3">Простуда</label>
+                                        </div>
+                                        <div class="catalog__form__item">
+                                            <input type="radio" id="radio4"  name="catalog-radio" >
+                                            <label for="radio4">Простуда</label>
+                                        </div>
+                                        <div class="catalog__form__item">
+                                            <input type="radio" id="radio5"  name="catalog-radio" >
+                                            <label for="radio5">Простуда</label>
+                                        </div>
+                                        <button type="submite">Применить фильтр</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__list">
+                            <div class="catalog__list__filter">
+                                <select class="select">
+                                    <option>По популярности</option>
+                                    <option>От дешевых к дорогим</option>
+                                    <option>От дорогих к дешевым</option>
+                                </select>
+                            </div>
+                            <div class="catalog__list__wrap">
+                                <div class="catalog__list__item">
+                                    <a class="catalog__list__img" href="" style="background-image: url('./img/catalog/tovar.jpg');"></a>
+                                    <a href="" class="catalog__list__name">Мыло руной работы</a>
+                                    <div class="catalog__list__price">100</div>
+                                    <a class="catalog__list__link">Добавлено в корзину</a>
+                                </div>
+                                <div class="catalog__list__item">
+                                    <a class="catalog__list__img" href="" style="background-image: url('./img/catalog/tovar.jpg');"></a>
+                                    <a href="" class="catalog__list__name">Мыло руной работы</a>
+                                    <div class="catalog__list__price">100</div>
+                                    <button 
+                                    data-fancybox="" 
+                                    data-src="#tovar-modal" 
+                                    data-modal="true"
+                                    class="catalog__list__btn">В корзину</button>
+                                </div>
+                                <div class="catalog__list__item">
+                                    <a class="catalog__list__img" href="" style="background-image: url('./img/catalog/tovar.jpg');"></a>
+                                    <a href="" class="catalog__list__name">Мыло руной работы</a>
+                                    <div class="catalog__list__price">100</div>
+                                    <button 
+                                    data-fancybox="" 
+                                    data-src="#tovar-modal" 
+                                    data-modal="true"
+                                    class="catalog__list__btn">В корзину</button>
+                                </div>
+                                <div class="catalog__list__item">
+                                    <a class="catalog__list__img" href="" style="background-image: url('./img/catalog/tovar.jpg');"></a>
+                                    <a href="" class="catalog__list__name">Мыло руной работы</a>
+                                    <div class="catalog__list__price">100</div>
+                                    <button 
+                                    data-fancybox="" 
+                                    data-src="#tovar-modal" 
+                                    data-modal="true"
+                                    class="catalog__list__btn">В корзину</button>
+                                </div>
+                                <div class="catalog__list__item">
+                                    <a class="catalog__list__img" href="" style="background-image: url('./img/catalog/tovar.jpg');"></a>
+                                    <a href="" class="catalog__list__name">Мыло руной работы</a>
+                                    <div class="catalog__list__price">100</div>
+                                    <button 
+                                    data-fancybox="" 
+                                    data-src="#tovar-modal" 
+                                    data-modal="true"
+                                    class="catalog__list__btn">В корзину</button>
+                                </div>
+                                <div class="catalog__list__item">
+                                    <a class="catalog__list__img" href="" style="background-image: url('./img/catalog/tovar.jpg');"></a>
+                                    <a href="" class="catalog__list__name">Мыло руной работы</a>
+                                    <div class="catalog__list__price">100</div>
+                                    <button 
+                                    data-fancybox="" 
+                                    data-src="#tovar-modal" 
+                                    data-modal="true"
+                                    class="catalog__list__btn">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+
+            <div id="tovar-modal" class="animated-modal" style="display: none;">
+                <span>Товар успешно добавлен в корзину!</span>
+                <div>
+                    <a href="" class="catalog__list__link">Перейти в корзину</a>
+                    <button data-fancybox-close class="catalog__list__btn">Продолжить покупки</button>
+                </div>
+                
             </div>
         </main>
 
@@ -228,6 +341,7 @@
 <script src="./libs/jquery/jquery.min.js"></script>
 <script src="./libs/fullpage/fullpage.min.js"></script>
 <script src="./libs/fancybox/fancybox.js"></script>
+<script src="./libs/selectric/selectric.min.js"></script>
 <script src="./js/main.js"></script>
 </body>
 </html>

@@ -594,7 +594,8 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 100%;
+  height: calc(100% - 28px);
+  min-height: 360px;
   }
   .mob-menu .ul > li{
 	font-size: 22px;
@@ -657,6 +658,17 @@ body {
 		font-size: 18px;
 		line-height: 23px;
 	}
+  }
+  .mob-menu__bot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    img{
+      margin-right: 26px;
+    }
   }
 }
 
@@ -874,7 +886,7 @@ body {
 		padding: 20px 20px;
 	}
 }
-@media(max-width: 375px){
+@media(max-width: 374px){
 	.header {
 		height: 70px;
 	}
