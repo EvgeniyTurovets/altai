@@ -13,8 +13,8 @@ $(function(){
       $('.mob-menu').fadeToggle()
     })
 
-    $('.mob-menu .level1').click(function(){
-      $('.mob-menu .level2 a').fadeIn()
+    $('.mob-menu .level1 span').click(function(){
+      $('.mob-menu .level2').fadeIn()
     })
 
     $('.level2__close').click(function(){
