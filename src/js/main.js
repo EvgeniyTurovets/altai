@@ -1,3 +1,4 @@
+
 $(function(){
     if($('#fullpage').length){
 		if($(window).height() > 649 && $(window).width() > 991){
@@ -37,4 +38,49 @@ $(function(){
     $('.filter__close').click(function(){
       $('.catalog__filter').fadeOut()
     })
+
+
+    // товар
+    $('.big-cart').slick({
+      fade: true,
+      arrows: false,
+      asNavFor: '.nav-cart',
+    })
+    $('.nav-cart').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      variableWidth: true,
+      asNavFor: '.big-cart',
+      focusOnSelect: true,
+    })
+
+    $('.tovar-slider__wrap').slick({
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      infinite: true,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+          }
+        },
+        {
+          breakpoint:768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          }
+        },
+        {
+          breakpoint:375,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        },
+      ]
+    })
+
 })

@@ -188,7 +188,29 @@ body {
   background-image: url(../img/icons/h-user.png); }
 
 .h-bar__link-basket {
-  background-image: url(../img/icons/h-basket.png); }
+  background-image: url(../img/icons/h-basket.png);
+  position: relative; }
+  .h-bar__link-basket span {
+    width: 20px;
+    height: 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    color: #fff;
+    background-color: #000;
+    border-radius: 100%;
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+    right: 0;
+    top: 0;
+    -webkit-transform: translate(60%, -60%);
+            transform: translate(60%, -60%); }
 
 .h-menu {
   font-size: 0; }
@@ -484,6 +506,7 @@ body {
 
 .h-menu__item__sub {
   display: none;
+  z-index: 5;
   position: absolute;
   top: 100%;
   padding: 25px;

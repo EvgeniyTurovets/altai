@@ -10,6 +10,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='./libs/fullpage/fullpage.min.css?v=c0d6c6d25faa017133754fb48d6e8802'>
     <link rel='stylesheet' type='text/css' media='screen' href='./libs/fancybox/fancybox.min.css?v=c0d6c6d25faa017133754fb48d6e8802'>
     <link rel='stylesheet' type='text/css' media='screen' href='./libs/selectric/selectric.css?v=c0d6c6d25faa017133754fb48d6e8802'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./libs/slick/slick.css?v=c0d6c6d25faa017133754fb48d6e8802'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/main.min.css?v=c0d6c6d25faa017133754fb48d6e8802'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/page.min.css?v=c0d6c6d25faa017133754fb48d6e8802'>
 </head>
@@ -66,7 +67,10 @@
                                         <a href="#" class="h-bar__link h-bar__link-user"></a>
                                     </li>
                                     <li class="h-bar__item">
-                                        <a href="#" class="h-bar__link h-bar__link-basket"></a>
+                                        <a href="#" class="h-bar__link h-bar__link-basket">
+                                            <span>2</span>
+                                        </a>
+                                       
                                     </li>
                                 </ul>
                             </div>
@@ -152,143 +156,104 @@
 
         <main class="main">
             <div class="container-1269">
-                <div class="catalog">
-                    <a class="banner" href="">
-                        <img src="./img/catalog/baner.jpg">
-                    </a>
-                    <h1>косметическая продукция</h1>
-                    <div class="catalog__wrap">
-                        <div class="catalog__filter">
-                            <div class="catalog__filter__mobtop">
-                                <div class="filter__logo">
-                                    <img src="./img/h-logo.png">
-                                </div>
-                                <div class="filter__close">
-                                    <span></span>
-                                    <span></span>
-                                </div>
+                <div class="tovar">
+                    <h1>Мыло ручной работы</h1>
+                    <div class="tovar__wrap">
+                        <div class="tovar-cart">
+                            <div class="big-cart">
+                                <a data-fancybox="t-img" href="https://www.youtube.com/embed/xFa2_PVMeDQ" class="big-cart__item video" style="background-image: url(./img/tovar/cart.jpg);"></a>
+                                <a data-fancybox="t-img" href="./img/tovar/cart.jpg" class="big-cart__item" style="background-image: url(./img/tovar/cart.jpg);"></a>
+                                <a data-fancybox="t-img" href="./img/tovar/cart.jpg" class="big-cart__item" style="background-image: url(./img/tovar/cart.jpg);"></a>
+                                <a data-fancybox="t-img" href="./img/tovar/cart.jpg" class="big-cart__item" style="background-image: url(./img/tovar/cart.jpg);"></a>
+                                <a data-fancybox="t-img" href="./img/tovar/cart.jpg" class="big-cart__item" style="background-image: url(./img/tovar/cart.jpg);"></a>
+                                <a data-fancybox="t-img" href="./img/tovar/cart.jpg" class="big-cart__item" style="background-image: url(./img/tovar/cart.jpg);"></a>
                             </div>
-                            <div class="catalog__filter__item active">
-                                <div class="catalog__filter__title">Категория товара <span>-</span><span class="plus">+</span></div>
-                                <div class="catalog__filter__wrap">
-                                    <ul>
-                                        <li><a href="">Продукты пчеловодства</a></li>
-                                        <li><a href="">Хвойная продукция</a></li>
-                                        <li><a href="">Бальзамы/настойки</a></li>
-                                        <li><a href="">Пантовая продукция</a></li>
-                                        <li><a href="">Косметическая продукция</a></li>
-                                        <li><a href="">Продукция животного происхождения</a></li>
-                                        <li><a href="">Минеральные пищевые добавки</a></li>
-                                        <li><a href="">Травы</a></li>
-                                        <li><a href="">Фитосборы</a></li>
-                                        <li><a href="">Грибные лечебные препараты</a></li>
-                                        <li><a href="">Оздоровительная программа</a></li>
-                                    </div>
-                                </ul>
-                            </div>
-                            <div class="catalog__filter__item active">
-                                <div class="catalog__filter__title">Болезнь <span>-</span><span class="plus">+</span></div>
-                                <div class="catalog__filter__wrap">
-                                    <form class="catalog__form">
-                                        <div class="catalog__form__item">
-                                            <input type="radio" id="radio1" name="catalog-radio" checked>
-                                            <label for="radio1">Простуда</label>
-                                        </div>
-                                        <div class="catalog__form__item">
-                                            <input type="radio" id="radio2"  name="catalog-radio" >
-                                            <label for="radio2">Простуда</label>
-                                        </div>
-                                        <div class="catalog__form__item">
-                                            <input type="radio" id="radio3"  name="catalog-radio" >
-                                            <label for="radio3">Простуда</label>
-                                        </div>
-                                        <div class="catalog__form__item">
-                                            <input type="radio" id="radio4"  name="catalog-radio" >
-                                            <label for="radio4">Простуда</label>
-                                        </div>
-                                        <div class="catalog__form__item">
-                                            <input type="radio" id="radio5"  name="catalog-radio" >
-                                            <label for="radio5">Простуда</label>
-                                        </div>
-                                        <button type="submite">Применить фильтр</button>
-                                    </form>
-                                </div>
+                            <div class="nav-cart">
+                                <div class="nav-cart__item" style="background-image: url('./img/tovar/minicart.jpg');"></div>
+                                <div class="nav-cart__item" style="background-image: url('./img/tovar/minicart.jpg');"></div>
+                                <div class="nav-cart__item" style="background-image: url('./img/tovar/minicart.jpg');"></div>
+                                <div class="nav-cart__item" style="background-image: url('./img/tovar/minicart.jpg');"></div>
+                                <div class="nav-cart__item" style="background-image: url('./img/tovar/minicart.jpg');"></div>
+                                <div class="nav-cart__item" style="background-image: url('./img/tovar/minicart.jpg');"></div>
                             </div>
                         </div>
-                        <div class="catalog__list">
-                            <div class="catalog__list__filter">
-                                <button id="catalog__filter__btn"><img src="./img/catalog/filter.svg">Фильтр</button>
-                                <select class="select">
-                                    <option>По популярности</option>
-                                    <option>От дешевых к дорогим</option>
-                                    <option>От дорогих к дешевым</option>
-                                </select>
+                        <div class="tovar-right">
+                            <div class="tovar-right__title">Характеристики</div>
+                            <div class="har__wrap">
+                                <div>Вес:<span>100 г</span></div>
+                                <div>Цвет:<span>Лавандовый</span></div>
+                                <div>Производитель:<span>Голландия</span></div>
                             </div>
-                            <div class="catalog__list__wrap">
-                                <div class="catalog__list__item">
-                                    <a class="catalog__list__img" href="" style="background-image: url('./img/catalog/tovar.jpg');"></a>
-                                    <a href="" class="catalog__list__name">Мыло руной работы</a>
-                                    <div class="catalog__list__price">100</div>
-                                    <a class="catalog__list__link">Добавлено в корзину</a>
-                                </div>
-                                <div class="catalog__list__item">
-                                    <a class="catalog__list__img" href="" style="background-image: url('./img/catalog/tovar.jpg');"></a>
-                                    <a href="" class="catalog__list__name">Мыло руной работы</a>
-                                    <div class="catalog__list__price">100</div>
-                                    <button 
-                                    data-fancybox="" 
-                                    data-src="#tovar-modal" 
-                                    data-modal="true"
-                                    class="catalog__list__btn">В корзину</button>
-                                </div>
-                                <div class="catalog__list__item">
-                                    <a class="catalog__list__img" href="" style="background-image: url('./img/catalog/tovar.jpg');"></a>
-                                    <a href="" class="catalog__list__name">Мыло руной работы</a>
-                                    <div class="catalog__list__price">100</div>
-                                    <button 
-                                    data-fancybox="" 
-                                    data-src="#tovar-modal" 
-                                    data-modal="true"
-                                    class="catalog__list__btn">В корзину</button>
-                                </div>
-                                <div class="catalog__list__item">
-                                    <a class="catalog__list__img" href="" style="background-image: url('./img/catalog/tovar.jpg');"></a>
-                                    <a href="" class="catalog__list__name">Мыло руной работы</a>
-                                    <div class="catalog__list__price">100</div>
-                                    <button 
-                                    data-fancybox="" 
-                                    data-src="#tovar-modal" 
-                                    data-modal="true"
-                                    class="catalog__list__btn">В корзину</button>
-                                </div>
-                                <div class="catalog__list__item">
-                                    <a class="catalog__list__img" href="" style="background-image: url('./img/catalog/tovar.jpg');"></a>
-                                    <a href="" class="catalog__list__name">Мыло руной работы</a>
-                                    <div class="catalog__list__price">100</div>
-                                    <button 
-                                    data-fancybox="" 
-                                    data-src="#tovar-modal" 
-                                    data-modal="true"
-                                    class="catalog__list__btn">В корзину</button>
-                                </div>
-                                <div class="catalog__list__item">
-                                    <a class="catalog__list__img" href="" style="background-image: url('./img/catalog/tovar.jpg');"></a>
-                                    <a href="" class="catalog__list__name">Мыло руной работы</a>
-                                    <div class="catalog__list__price">100</div>
-                                    <button 
-                                    data-fancybox="" 
-                                    data-src="#tovar-modal" 
-                                    data-modal="true"
-                                    class="catalog__list__btn">В корзину</button>
-                                </div>
+                            <div class="tovar-right__title"> 3000 руб</div>
+                            <div class="tovar__right__btn">
+                                <button data-fancybox="" data-src="#tovar-modal" data-modal="true" class="tovar__right__btn1">В корзину</button>
+                                <button data-fancybox="" data-src="#tovar-modal2" data-modal="true" class="tovar__right__btn2">Купить в 1 клик</button>
                             </div>
+                        </div> 
+                    </div>
+
+
+                    <div class="tovar-text">
+                        <div class="tovar-text__desc">
+                            <h2>Описание</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien nisi, venenatis volutpat id nisl maecenas condimentum mi. Magna purus quis faucibus posuere. Viverra consequat, condimentum dui nibh praesent. Id felis ultricies diam tristique sit porttitor in. Pulvinar bibendum in consequat mollis egestas. Semper fermentum velit tristique vulputate suspendisse. Est suspendisse nunc lacus, feugiat dui fermentum vel nisl congue. Elementum dictumst nascetur bibendum odio ac. Eget morbi odio aenean a turpis. Id faucibus sed pellentesque rhoncus, iaculis eget mattis eget purus. Vitae in amet aliquet purus, at viverra purus pulvinar mauris. Aliquam ut scelerisque sed quam fringilla tristique. Volutpat ultricies eget montes, vel.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien nisi, venenatis volutpat id nisl maecenas condimentum mi. Magna purus quis faucibus posuere. Viverra consequat, condimentum dui nibh praesent. Id felis ultricies diam tristique sit porttitor in. Pulvinar bibendum in consequat mollis egestas. Semper fermentum velit tristique vulputate suspendisse. Est suspendisse nunc lacus, feugiat dui fermentum vel nisl congue. Elementum dictumst nascetur bibendum odio ac. Eget morbi odio aenean a turpis. Id faucibus sed pellentesque rhoncus, iaculis eget mattis eget purus. Vitae in amet aliquet purus, at viverra purus pulvinar mauris. Aliquam ut scelerisque sed quam fringilla tristique. Volutpat ultricies eget montes, vel.
+                            </p>
+                        </div>
+                        <div class="tovar-text__sostav">
+                            <h3>Состав</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien nisi, venenatis volutpat id nisl maecenas condimentum mi. Magna purus quis faucibus posuere. Viverra consequat, condimentum dui nibh praesent. Id felis ultricies diam tristique sit porttitor in. Pulvinar bibendum in consequat mollis egestas. Semper fermentum velit tristique vulputate suspendisse. Est suspendisse nunc lacus, feugiat dui fermentum vel nisl congue. Elementum dictumst nascetur bibendum odio ac. Eget morbi odio aenean a turpis. Id faucibus sed pellentesque rhoncus, iaculis eget mattis eget purus. Vitae in amet aliquet purus, at viverra purus pulvinar mauris. Aliquam ut scelerisque sed quam fringilla tristique. Volutpat ultricies eget montes, vel.</p>
                         </div>
                     </div>
-                    <div class="catalog-text">
-                        <h2>Информация о доставке и оплате</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit ac, vel aenean vel ut.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitant feugiat nunc, urna pellentesque purus. Facilisis accumsan ipsum donec scelerisque donec risus tellus neque, neque. Risus leo ut ut rutrum sed risus. Gravida sit sed nisl, sem diam, scelerisque dictum consectetur.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitant feugiat nunc, urna pellentesque purus. Facilisis accumsan ipsum donec scelerisque donec risus tellus neque, neque. Risus leo ut ut rutrum sed risus. Gravida sit sed nisl, sem diam, scelerisque dictum consectetur.</p>
+                </div>
+
+                <div class="tovar-slider">
+                    <div class="tovar-slider__title">С этим товаром покупают</div>
+                    <div class="tovar-slider__wrap">
+                            <div class="catalog__list__item">
+                                <a class="catalog__list__img" href="" style="background-image: url('./img/catalog/tovar.jpg');"></a>
+                                <a href="" class="catalog__list__name">Мыло руной работы</a>
+                                <div class="catalog__list__price">100</div>
+                                <button data-fancybox="" data-src="#tovar-modal" data-modal="true" class="catalog__list__btn">В корзину</button>
+                            </div>
+
+                            <div class="catalog__list__item">
+                                <a class="catalog__list__img" href="" style="background-image: url('./img/catalog/tovar.jpg');"></a>
+                                <a href="" class="catalog__list__name">Мыло руной работы</a>
+                                <div class="catalog__list__price">100</div>
+                                <button data-fancybox="" data-src="#tovar-modal" data-modal="true" class="catalog__list__btn">В корзину</button>
+                            </div>
+
+                            <div class="catalog__list__item">
+                                <a class="catalog__list__img" href="" style="background-image: url('./img/catalog/tovar.jpg');"></a>
+                                <a href="" class="catalog__list__name">Мыло руной работы</a>
+                                <div class="catalog__list__price">100</div>
+                                <button data-fancybox="" data-src="#tovar-modal" data-modal="true" class="catalog__list__btn">В корзину</button>
+                            </div>
+
+                            <div class="catalog__list__item">
+                                <a class="catalog__list__img" href="" style="background-image: url('./img/catalog/tovar.jpg');"></a>
+                                <a href="" class="catalog__list__name">Мыло руной работы</a>
+                                <div class="catalog__list__price">100</div>
+                                <button data-fancybox="" data-src="#tovar-modal" data-modal="true" class="catalog__list__btn">В корзину</button>
+                            </div>
+
+                            <div class="catalog__list__item">
+                                <a class="catalog__list__img" href="" style="background-image: url('./img/catalog/tovar.jpg');"></a>
+                                <a href="" class="catalog__list__name">Мыло руной работы</a>
+                                <div class="catalog__list__price">100</div>
+                                <button data-fancybox="" data-src="#tovar-modal" data-modal="true" class="catalog__list__btn">В корзину</button>
+                            </div>
+
+                            <div class="catalog__list__item">
+                                <a class="catalog__list__img" href="" style="background-image: url('./img/catalog/tovar.jpg');"></a>
+                                <a href="" class="catalog__list__name">Мыло руной работы</a>
+                                <div class="catalog__list__price">100</div>
+                                <button data-fancybox="" data-src="#tovar-modal" data-modal="true" class="catalog__list__btn">В корзину</button>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -299,7 +264,26 @@
                     <a href="" class="catalog__list__link">Перейти в корзину</a>
                     <button data-fancybox-close class="catalog__list__btn">Продолжить покупки</button>
                 </div>
-                
+            </div>
+
+            <div id="tovar-modal2" class="animated-modal" style="display: none;">
+                <div data-fancybox-close class="fancyclose">
+                    <span></span>
+                    <span></span>
+                </div>
+                <h2>Оставьте свои данные и мы свяжемся с вами</h2>
+                <form id="tovar-modal2-form">
+                    <input type="text" name="name" placeholder="ФИО">
+                    <input type="phone" name="phone" placeholder="Телефон">
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+            <div id="tovar-modal-spasibo" class="animated-modal" style="display: none;">
+                <div data-fancybox-close class="fancyclose">
+                    <span></span>
+                    <span></span>
+                </div>
+                <h2>Спасибо за заказ! <br>Мы свяжемся с вами в ближайшее время</h2>
             </div>
         </main>
 
@@ -358,6 +342,7 @@
 <script src="./libs/fullpage/fullpage.min.js?v=c0d6c6d25faa017133754fb48d6e8802"></script>
 <script src="./libs/fancybox/fancybox.js?v=c0d6c6d25faa017133754fb48d6e8802"></script>
 <script src="./libs/selectric/selectric.min.js?v=c0d6c6d25faa017133754fb48d6e8802"></script>
+<script src="./libs/slick/slick.min.js?v=c0d6c6d25faa017133754fb48d6e8802"></script>
 <script src="./js/main.js?v=c0d6c6d25faa017133754fb48d6e8802"></script>
 </body>
 </html>

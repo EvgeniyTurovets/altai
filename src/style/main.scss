@@ -83,7 +83,27 @@ body {
     .h-bar__link-user {
       background-image: url(../img/icons/h-user.png); }
     .h-bar__link-basket {
-      background-image: url(../img/icons/h-basket.png); }
+      background-image: url(../img/icons/h-basket.png); 
+      position: relative;
+      span{
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        background-color: #000;
+        border-radius: 100%;
+        display: block;
+        position: absolute;
+        font-size: 12px;
+        text-align: center;
+        line-height: 20px;
+        right: 0;
+        top: 0;
+        transform: translate(60%, -60%);
+      }
+    }
 
 .h-menu {
   font-size: 0; }
@@ -376,6 +396,7 @@ body {
 }
 .h-menu__item__sub{
   display: none;
+  z-index: 5;
   position: absolute;
   top:100%;
   padding: 25px;

@@ -1,7 +1,27 @@
 html,body{
     height: 100%;
 }
-
+h2{
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 27px;
+}
+p{
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 17px;
+}
+@media(max-width: 767px){
+    h2{
+        font-size: 19px;
+        line-height: 24px;
+        margin-bottom: 11px;
+    }
+    p{
+        font-size:16px;
+        line-height:20px;
+    }
+}
 .app{
     display: flex;
     flex-direction: column;
@@ -541,5 +561,412 @@ html,body{
     .catalog__filter{
         padding-right: 20px;
         padding-left: 20px;
+    }
+}
+
+
+// товар
+.tovar h1{
+    font-size: 35px;
+    line-height: 44px;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+.tovar-cart{
+    width: 514px;
+    margin-bottom: 35px;
+}
+.tovar__wrap{
+    display: flex;
+}
+.big-cart{
+    width: 100%;
+    
+}
+.big-cart__item{
+    display: block;
+    height: 455px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.big-cart__item.video{
+    position: relative;
+}
+
+.big-cart__item.video:after{
+    content: "";
+    width: 121px;
+    height: 121px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #262526;
+    border-radius: 100%;
+    background-image: url('../img/tovar/video.svg');
+    background-repeat: no-repeat;
+    background-size: 47px;
+    background-position: center left 42px;
+    transition: 0.3s all;
+}
+.nav-cart__item{
+    width: 92px;
+    height: 74px;
+    margin: 0 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+.nav-cart__item.slick-current{
+    border: 2px solid #262526;
+}
+.nav-cart{
+    display: flex;
+    margin-top: 38px;
+}
+.nav-cart .slick-arrow{
+    cursor: pointer;
+    flex: 0 0 107px;
+    background-color: #fff;
+    background-image: url('../img/tovar/t-arr.svg');
+    font-size: 0;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+.nav-cart .slick-arrow.slick-prev{
+    background-position: left center;
+    background-image: url('../img/tovar/t-arr-l.svg');
+}
+
+
+.tovar-right{
+    padding-left: 128px;
+}
+.tovar-right__title{
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 34px;
+}
+.har__wrap{
+    font-size: 25px;
+    line-height: 31px;
+    margin-bottom: 34px;
+}
+.har__wrap div{
+    margin-bottom: 17px;
+}
+.har__wrap span{
+    color: rgba(0, 0, 0, 0.5);
+    padding-left: 12px;
+}
+.tovar__right__btn{
+    display: flex;
+}
+.tovar__right__btn button{
+    width: 306px;
+    height: 74px;
+    margin-right: 15px;
+}
+.tovar__right__btn1{
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 33px;
+    border: 1px solid #262526;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.tovar__right__btn1:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.tovar__right__btn2{
+    font-size: 26px;
+    line-height: 33px;
+    color: #fff;
+    background: #262526;
+    transition: 0.3s all;
+    font-weight: bold;
+    cursor: pointer;
+}
+.tovar__right__btn2:hover{
+    opacity: 0.9;
+}
+
+#tovar-modal2{
+    width: 450px;
+    padding: 25px;
+    position: relative;
+}
+#tovar-modal2 form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#tovar-modal2 h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+#tovar-modal2 input{
+    width: 100%;
+    height: 43px;
+    background: rgba(213, 213, 213, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #000;
+}
+#tovar-modal2 input::placeholder{
+    font-size: 18px;
+}
+
+#tovar-modal2 button{
+    font-size: 15px;
+    line-height: 19px;
+    text-align: center;
+    font-weight: 700;
+    background: #242424;
+    color: #fff;
+    width: 221px;
+    height: 43px;
+    cursor: pointer;
+}
+.fancyclose{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 0px;
+    top: 0px;
+    cursor: pointer;
+}
+.fancyclose span:nth-child(1) {
+    width: 20px;
+    height: 2px;
+    display: block;
+    background-color: #000;
+    position: absolute;
+    top: 15px;
+    left: 9px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.fancyclose span:nth-child(2) {
+    width: 20px;
+    height: 2px;
+    display: block;
+    background-color: #000;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#tovar-modal-spasibo{
+    padding: 50px;
+}
+#tovar-modal-spasibo h2{
+    text-align: center;
+}
+@media(max-width: 1399px){
+    .tovar-right{
+        padding-left: 50px;
+    }
+}
+
+@media(max-width: 1279px){
+    .tovar__right__btn{
+        flex-direction: column;
+    }
+    .tovar__right__btn button{
+        margin-right: 0;
+        margin-bottom: 15px;
+    }   
+}
+@media(max-width: 1023px){
+    .tovar__wrap{
+        flex-direction: column;
+        align-items: center;
+    }
+    .tovar-right{
+        padding-left: 0;
+        width: 100%;
+    }
+    .tovar h1{
+        text-align: center;
+    }
+}
+
+@media(max-width: 559px){
+    .tovar-cart{
+        width: 100%;
+    }
+    .big-cart__item{
+        height: auto;
+        padding-bottom: 15%;
+    }
+    .tovar__right__btn button{
+        width: 100%;
+        height: 66px;
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .tovar-right__title{
+        font-size: 19px;
+        line-height: 24px;
+        margin-bottom: 15px;
+    }
+    .har__wrap div{
+        font-size: 17px;
+        line-height: 21px;
+        margin-bottom: 15px;
+    }
+    .har__wrap span{
+        padding-left: 10px;
+    }
+   
+    .nav-cart .slick-arrow{
+        flex: 0 0 23%;
+    }
+    .tovar h1{
+        text-align: left;
+        font-size: 25px;
+        line-height: 31px;
+        margin-bottom: 23px;
+    }
+    .har__wrap{
+        margin-bottom: 15px;
+    }
+    .tovar__right__btn{
+        margin-top: 30px;
+    }
+    .nav-cart .slick-arrow{
+        flex: 1;
+        background-size: 50%;
+    }
+    .nav-cart .slick-list{
+        width: 200px;
+    }
+    .big-cart__item.video:after{
+        width: 90px;
+        height: 90px;
+        background-size: 35px;
+        background-position: center left 33px;
+    }
+}
+
+
+@media(max-width: 424px){
+    #tovar-modal div{
+       flex-direction: column;
+    }
+    #tovar-modal a{
+        margin-bottom: 15px;
+    }
+}
+@media(max-width: 374px){
+    #tovar-modal2 h2{
+        font-size: 20px;
+    }
+}
+
+h3{
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 19px;
+}
+.tovar-text__desc{
+    margin-bottom: 38px;
+}
+.tovar-text__sostav p{
+    font-size: 18px;
+    line-height: 23px;
+}
+.tovar-text{
+    margin-bottom: 56px;
+}
+
+@media(max-width: 1023px){
+    .tovar-text{
+        margin-top: 25px;
+    }
+}
+@media(max-width: 767px){
+    .tovar-text__desc{
+        margin-bottom: 35px;
+    }
+    h3{
+        font-size: 17px;
+        line-height: 21px;
+        margin-bottom: 10px;
+    }
+    .tovar-text__sostav p{
+        font-size: 13px;
+        line-height: 16px;
+    }
+}
+
+.tovar-slider__title{
+    font-size: 35px;
+    line-height: 44px;
+    font-weight: bold;
+}
+.tovar-slider__wrap{
+    padding-top: 41px;
+}
+.tovar-slider__wrap .slick-list{
+    margin: 0 -7px;
+}
+.tovar-slider__wrap .slick-arrow{
+    width: 41px;
+    height: 15px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    font-size: 0;
+    background-image: url('../img/tovar/t-arr.svg');
+    position: absolute;
+    right: 0;
+    top: -28px;
+    cursor: pointer;
+}
+.tovar-slider__wrap .slick-arrow.slick-prev{
+    right: 50px;
+    background-image: url('../img/tovar/t-arr-l.svg');
+}
+.tovar-slider__wrap a:focus{
+    outline: none;
+}
+
+@media(max-width: 767px){
+    .tovar-slider__wrap{
+        display: flex;
+    }
+    .tovar-slider__wrap .slick-list{
+        width: 90%;
+    }
+    .tovar-slider__wrap .slick-arrow{
+        position: initial;
+        flex: 1;
+        margin-top: 35px;
+        background-size: 22px 8px;
+        background-position: center right;
+        margin-right: -5px;
+    }
+    .tovar-slider__wrap .slick-arrow.slick-prev{
+        background-position: center left;
+        margin-right: 0;
+        margin-left: -5px;
+    }
+    .tovar-slider__title{
+        font-size: 25px;
+        line-height: 31px;
     }
 }
