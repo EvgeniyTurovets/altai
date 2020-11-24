@@ -30,4 +30,11 @@ $(function(){
     if( $('.select').length ){
       $('.select').selectric()
     }
+
+    $('#catalog__filter__btn').click(function(){
+      $('.catalog__filter').fadeIn()
+    })
+    $('.filter__close').click(function(){
+      $('.catalog__filter').fadeOut()
+    })
 })
