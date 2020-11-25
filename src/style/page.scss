@@ -1508,7 +1508,7 @@ input:focus{
     display: flex;
     margin: 0 -7px;
 }
-.korina-form__wrap{
+.contact .korina-form__wrap{
     width: 50%;
     margin: 0 7px;
     .label{
@@ -1573,14 +1573,14 @@ input:focus{
         margin: 0;
         flex-direction: column;
     }
-    .korina-form__wrap{
+    .contact .korina-form__wrap{
         width: 100%;
         margin: 0;
     }
-    .korina-form__wrap textarea{
+    .contact .korina-form__wrap textarea{
         margin-top: 0;
     }
-    .korina-form__wrap button{
+    .contact .korina-form__wrap button{
         margin-top: 30px;
     }
     .contact__item:last-child{
@@ -1590,5 +1590,105 @@ input:focus{
 @media(max-width: 412px){
     #map{
         margin: 0 -15px;
+    }
+}
+
+.history__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    a{
+        padding-top: 8px;
+        display: flex;
+        align-items: center;
+        font-size: 22px;
+        line-height: 28px;
+        svg{
+            margin-right: 11px;
+            margin-top: 3px;
+            transition: 0.3s all;
+        }
+        span{
+            margin-left: 6px;
+        }
+    }
+    a:hover{
+        svg{
+            transform: translateX(-5px);
+        }
+    }
+}
+
+.korzina__head__item.price{
+    flex: 0 0 300px;
+    text-align: right;
+    padding-right: 75px;
+}
+.korzina__head__item.count{
+    flex:  0 0 300px;
+}
+.history .korzina__price{
+    flex: 0 0 300px;
+    padding-right: 75px;
+    text-align: right;
+}
+.history .korzina__name{
+    flex: 1;
+}
+.history .korzina__count{
+    flex: 0 0 300px;
+}
+.korzina__head .flex{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+@media(max-width: 1199px){
+    .korzina__head__item.price{
+        flex: 0 0 200px;
+    }
+    .korzina__head__item.count{
+        flex: 0 0 200px;
+    }
+    .history .korzina__price{
+        flex: 0 0 200px;
+    }
+    .history .korzina__count{
+        flex: 0 0 200px;
+    }
+}
+@media(max-width: 991px){
+    .korzina__head__item.price{
+        flex: 0 0 150px;
+        padding-right: 15px;
+    }
+    .korzina__head__item.count{
+        flex: 0 0 100px;
+        
+    }
+    .history .korzina__price{
+        flex: 0 0 150px;
+        padding-right: 15px;
+    }
+    .history .korzina__count{
+        flex: 0 0 100px;
+    }
+}
+
+@media(max-width:767px){
+    .korzina__head__item.count{
+        display: none;
+    }
+    .history .korzina__price{
+        order: 1;
+        flex: 0 0 80px;
+    }
+    .history .korzina__count{
+        flex: 0 0 100%;
+    }
+    .history__top a span{
+        display: none;
     }
 }

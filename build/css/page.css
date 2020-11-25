@@ -1410,29 +1410,29 @@ input:focus {
   display: flex;
   margin: 0 -7px; }
 
-.korina-form__wrap {
+.contact .korina-form__wrap {
   width: 50%;
   margin: 0 7px; }
-  .korina-form__wrap .label {
+  .contact .korina-form__wrap .label {
     font-size: 14px;
     line-height: 18px;
     color: rgba(38, 37, 38, 0.7);
     display: block;
     margin-bottom: 4px; }
-  .korina-form__wrap input {
+  .contact .korina-form__wrap input {
     background: rgba(213, 213, 213, 0.5);
     height: 42px;
     margin-bottom: 30px;
     width: 100%;
     padding: 0 15px; }
-  .korina-form__wrap textarea {
+  .contact .korina-form__wrap textarea {
     margin-top: 21px;
     width: 100%;
     height: 136px;
     border: 1px solid #000000;
     resize: none;
     padding: 12px 15px; }
-  .korina-form__wrap button {
+  .contact .korina-form__wrap button {
     background: #242424;
     font-size: 15px;
     width: 100%;
@@ -1442,7 +1442,7 @@ input:focus {
     transition: 0.3s all;
     color: #FFFFFF;
     margin-top: 47px; }
-  .korina-form__wrap button:hover {
+  .contact .korina-form__wrap button:hover {
     opacity: 0.9;
     cursor: pointer; }
 
@@ -1466,12 +1466,12 @@ input:focus {
     margin: 0;
     -ms-flex-direction: column;
         flex-direction: column; }
-  .korina-form__wrap {
+  .contact .korina-form__wrap {
     width: 100%;
     margin: 0; }
-  .korina-form__wrap textarea {
+  .contact .korina-form__wrap textarea {
     margin-top: 0; }
-  .korina-form__wrap button {
+  .contact .korina-form__wrap button {
     margin-top: 30px; }
   .contact__item:last-child {
     margin-bottom: 0; } }
@@ -1479,3 +1479,106 @@ input:focus {
 @media (max-width: 412px) {
   #map {
     margin: 0 -15px; } }
+
+.history__top {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: start;
+      align-items: flex-start; }
+  .history__top a {
+    padding-top: 8px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    font-size: 22px;
+    line-height: 28px; }
+    .history__top a svg {
+      margin-right: 11px;
+      margin-top: 3px;
+      transition: 0.3s all; }
+    .history__top a span {
+      margin-left: 6px; }
+  .history__top a:hover svg {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px); }
+
+.korzina__head__item.price {
+  -ms-flex: 0 0 300px;
+      flex: 0 0 300px;
+  text-align: right;
+  padding-right: 75px; }
+
+.korzina__head__item.count {
+  -ms-flex: 0 0 300px;
+      flex: 0 0 300px; }
+
+.history .korzina__price {
+  -ms-flex: 0 0 300px;
+      flex: 0 0 300px;
+  padding-right: 75px;
+  text-align: right; }
+
+.history .korzina__name {
+  -ms-flex: 1;
+      flex: 1; }
+
+.history .korzina__count {
+  -ms-flex: 0 0 300px;
+      flex: 0 0 300px; }
+
+.korzina__head .flex {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex: 1;
+      flex: 1;
+  -ms-flex-pack: end;
+      justify-content: flex-end; }
+
+@media (max-width: 1199px) {
+  .korzina__head__item.price {
+    -ms-flex: 0 0 200px;
+        flex: 0 0 200px; }
+  .korzina__head__item.count {
+    -ms-flex: 0 0 200px;
+        flex: 0 0 200px; }
+  .history .korzina__price {
+    -ms-flex: 0 0 200px;
+        flex: 0 0 200px; }
+  .history .korzina__count {
+    -ms-flex: 0 0 200px;
+        flex: 0 0 200px; } }
+
+@media (max-width: 991px) {
+  .korzina__head__item.price {
+    -ms-flex: 0 0 150px;
+        flex: 0 0 150px;
+    padding-right: 15px; }
+  .korzina__head__item.count {
+    -ms-flex: 0 0 100px;
+        flex: 0 0 100px; }
+  .history .korzina__price {
+    -ms-flex: 0 0 150px;
+        flex: 0 0 150px;
+    padding-right: 15px; }
+  .history .korzina__count {
+    -ms-flex: 0 0 100px;
+        flex: 0 0 100px; } }
+
+@media (max-width: 767px) {
+  .korzina__head__item.count {
+    display: none; }
+  .history .korzina__price {
+    -ms-flex-order: 1;
+        order: 1;
+    -ms-flex: 0 0 80px;
+        flex: 0 0 80px; }
+  .history .korzina__count {
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%; }
+  .history__top a span {
+    display: none; } }
