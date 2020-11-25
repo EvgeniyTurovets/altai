@@ -153,26 +153,141 @@
 
         <main class="main">
             <div class="container-1269">
-                <div class="categorii">
-                    <a href="" class="categorii__item" style="background-image: url('./img/main/c1.jpg');">
-                        <div class="categorii__name">Продукты пчеловодства</div>
-                    </a>
-                    <a href="" class="categorii__item" style="background-image: url('./img/main/c2.jpg');">
-                        <div class="categorii__name">Хвойная продукция</div>
-                    </a>
-                    <a href="" class="categorii__item" style="background-image: url('./img/main/c3.jpg');">
-                        <div class="categorii__name">бальзамы/настойки</div>
-                    </a>
-                    <a href="" class="categorii__item" style="background-image: url('./img/main/c4.jpg');">
-                        <div class="categorii__name">косметическая продукция</div>
-                    </a>
-                    <a href="" class="categorii__item" style="background-image: url('./img/main/c5.jpg');">
-                        <div class="categorii__name">травы</div>
-                    </a>
-                    <a href="" class="categorii__item" style="background-image: url('./img/main/c6.jpg');">
-                        <div class="categorii__name">фиточай</div>
-                    </a>
-                </div>
+               <h1 class="black-title">Корзина</h1>
+               <div class="korzina">
+                   <div class="korzina__head">
+                       <div class="korzina__head__item item1">Товар</div>
+                       <div class="korzina__head__item item2">Наименование</div>
+                       <div class="korzina__head__item item3">Количество</div>
+                       <div class="korzina__head__item item4">Цена</div>
+                       <div class="korzina__head__item item5">Удалить</div>
+                   </div>
+                   <div class="korzina__body">
+                       <div class="korzina__body__item">
+                           <div class="korina__tovar">
+                               <img src="./img/catalog/tovar.jpg">
+                           </div>
+                           <div class="korzina__flex">
+                               <div class="korzina__name">Мыло ручной работы</div>
+                               <div class="korzina__count">
+                                   <div class="v-minus">—</div>
+                                   <div class="v-count">1</div>
+                                   <div class="v-plus">+</div>
+                                </div>
+                               <div class="korzina__price">100 руб</div>
+                               <button class="korzina__delete">
+                                   <img src="./img/korzina/del.svg">
+                               </button>
+                           </div>
+                       </div>
+                       <div class="korzina__body__item">
+                        <div class="korina__tovar">
+                            <img src="./img/catalog/tovar.jpg">
+                        </div>
+                        <div class="korzina__flex">
+                            <div class="korzina__name">Мыло ручной работы</div>
+                            <div class="korzina__count">
+                                <div class="v-minus">—</div>
+                                <div class="v-count">1</div>
+                                <div class="v-plus">+</div>
+                             </div>
+                            <div class="korzina__price">100 руб</div>
+                            <button class="korzina__delete">
+                                <img src="./img/korzina/del.svg">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="korzina__body__item">
+                        <div class="korina__tovar">
+                            <img src="./img/catalog/tovar.jpg">
+                        </div>
+                        <div class="korzina__flex">
+                            <div class="korzina__name">Мыло ручной работы</div>
+                            <div class="korzina__count">
+                                <div class="v-minus">—</div>
+                                <div class="v-count">1</div>
+                                <div class="v-plus">+</div>
+                             </div>
+                            <div class="korzina__price">100 руб</div>
+                            <button class="korzina__delete">
+                                <img src="./img/korzina/del.svg">
+                            </button>
+                        </div>
+                    </div>
+                   </div>
+                   <div class="korzina__bot">
+                       <div class="kozrina__bot__item">
+                           <span>Доставка:</span>900 руб
+                       </div>
+                       <div class="kozrina__bot__item">
+                           <span>Итого:</span>3900 руб
+                       </div>
+                   </div>
+               </div>
+               <form class="korzina-form">
+
+                   <div class="korzina-form__item">
+                       <div class="korzina-form__title">Личные данные</div>
+                       <div class="korina-form__wrap">
+                            <label class="label">Имя</label>
+                            <input type="text">
+                            <label class="label">Телефон</label>
+                            <input type="text">
+                            <label class="label">Почта</label>
+                            <input type="text">
+                       </div>
+                   </div>
+
+                   <div class="korzina-form__item">
+                        <div class="korzina-form__title">Информация по доставке</div>
+                        <div class="korzina-form__text">Выберите вид доставки заказа:</div>
+                        <div class="korzina-form__radioblock">
+                            <div class="catalog__form__item">
+                                <input type="radio" id="radio1" name="catalog-radio" checked="">
+                                <label for="radio1">Курьер</label>
+                            </div>
+                            <div class="catalog__form__item">
+                                <input type="radio" id="radio2" name="catalog-radio">
+                                <label for="radio2">Самовывоз</label>
+                            </div>
+                        </div>
+                        <div class="korina-form__wrap">
+                            <label class="label">Адрес</label>
+                            <input type="text">
+                            <div class="korina-form__col3 row">
+                                <div class="col-4">
+                                    <label class="label">Дом</label>
+                                    <input type="text">
+                                </div>
+                                <div class="col-4">
+                                    <label class="label">Кв</label>
+                                    <input type="text">
+                                </div>
+                                <div class="col-4">
+                                    <label class="label">Этаж</label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                       </div>
+                        
+                    </div>
+
+                    <div class="korzina-form__item">
+                        <div class="korzina-form__title">Информация по оплате</div>
+                        <div class="korzina-form__text">Выберите способ оплаты заказа:</div>
+                        <div class="korzina-form__radioblock">
+                            <div class="catalog__form__item">
+                                <input type="radio" id="radio3" name="catalog-radio2" checked="">
+                                <label for="radio3">Банковская карта</label>
+                            </div>
+                            <div class="catalog__form__item">
+                                <input type="radio" id="radio4" name="catalog-radio2">
+                                <label for="radio4">Наличные</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="korzina-form__btn">Оформить заказ</button>
+                    </div>
+                </form>
             </div>
         </main>
 
