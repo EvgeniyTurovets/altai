@@ -83,4 +83,17 @@ $(function(){
       ]
     })
 
+    if($('.cabinet .adressa').length){
+		function adressaAppend(){
+			if( $(window).width() < 768 ){
+				$( ".adressa" ).insertAfter( ".cabinet__table" );
+			}else{
+				$( ".adressa" ).insertAfter( ".cabinet__form" );
+			}
+		}
+		adressaAppend();
+		window.onresize = function(event) {
+			adressaAppend();
+		};
+	}
 })
