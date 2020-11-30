@@ -7,8 +7,8 @@ h2{
     margin-bottom: 27px;
 }
 p{
-    font-size: 24px;
-    line-height: 31px;
+    font-size: 18px;
+    line-height:24px;
     margin-bottom: 17px;
 }
 
@@ -19,8 +19,8 @@ p{
         margin-bottom: 11px;
     }
     p{
-        font-size:16px;
-        line-height:20px;
+        font-size:14px;
+        line-height:18px;
     }
 }
 .app{
@@ -1492,7 +1492,9 @@ input:focus{
 }
 .contact__item{
     width: 50%;
+    margin-bottom: 50px;
 }
+
 .contact__line{
     margin-bottom: 20px;
     display: flex;
@@ -1556,7 +1558,7 @@ input:focus{
     }
     .contact__item{
         width: 100%;
-        margin-bottom: 50px;
+        margin-bottom: 42px;
     }
 }
 @media(max-width: 991px){
@@ -1583,9 +1585,7 @@ input:focus{
     .contact .korina-form__wrap button{
         margin-top: 30px;
     }
-    .contact__item:last-child{
-        margin-bottom: 0;
-    }
+    
 }
 @media(max-width: 412px){
     #map{
@@ -1870,11 +1870,22 @@ input:focus{
     display: flex;
     align-items: center;
     cursor: pointer;
+    overflow: hidden;
     background-color: #fff;
     img{
         margin-right: 14px;
         transition: 0.3s all;
     }
+    span{
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: 0.3s all;
+    }
+}
+
+.cabinet-povtor:hover span{
+    opacity: 1;
+    transform: translateX(0);
 }
 .cabinet-povtor:hover img{
     transform: rotate(180deg);
@@ -1928,6 +1939,10 @@ input:focus{
     .cabinet__right{
         padding-left: 0;
         width: 100%;
+    }
+    .cabinet-povtor span{
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 @media(max-width: 767px){
