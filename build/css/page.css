@@ -92,13 +92,22 @@ p {
 .banner {
   display: block; }
 
-.catalog__wrap {
-  display: -ms-flexbox;
-  display: flex; }
-
 .banner img {
   width: 100%;
   display: block; }
+
+.banner img.banner__mob {
+  display: none; }
+
+@media (max-width: 767px) {
+  .banner img {
+    display: none; }
+  .banner img.banner__mob {
+    display: block; } }
+
+.catalog__wrap {
+  display: -ms-flexbox;
+  display: flex; }
 
 .catalog h1 {
   font-family: 'YoungHeart',sans-serif;
@@ -614,13 +623,13 @@ p {
 
 .tovar-right__title {
   font-weight: bold;
-  font-size: 30px;
-  line-height: 38px;
+  font-size: 26px;
+  line-height: 33px;
   margin-bottom: 34px; }
 
 .har__wrap {
-  font-size: 25px;
-  line-height: 31px;
+  font-size: 20px;
+  line-height: 26px;
   margin-bottom: 34px; }
 
 .har__wrap div {
@@ -635,14 +644,14 @@ p {
   display: flex; }
 
 .tovar__right__btn button {
-  width: 306px;
-  height: 74px;
+  width: 280px;
+  height: 65px;
   margin-right: 15px; }
 
 .tovar__right__btn1 {
   font-weight: bold;
-  font-size: 26px;
-  line-height: 33px;
+  font-size: 22px;
+  line-height: 28px;
   border: 1px solid #262526;
   background-color: #fff;
   cursor: pointer;
@@ -652,8 +661,8 @@ p {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
 
 .tovar__right__btn2 {
-  font-size: 26px;
-  line-height: 33px;
+  font-size: 22px;
+  line-height: 28px;
   color: #fff;
   background: #262526;
   transition: 0.3s all;
@@ -836,10 +845,6 @@ h3 {
 .tovar-text__desc {
   margin-bottom: 38px; }
 
-.tovar-text__sostav p {
-  font-size: 18px;
-  line-height: 23px; }
-
 .tovar-text {
   margin-bottom: 56px; }
 
@@ -853,10 +858,7 @@ h3 {
   h3 {
     font-size: 17px;
     line-height: 21px;
-    margin-bottom: 10px; }
-  .tovar-text__sostav p {
-    font-size: 13px;
-    line-height: 16px; } }
+    margin-bottom: 10px; } }
 
 .tovar-slider__title {
   font-size: 35px;
@@ -1399,8 +1401,8 @@ input:focus {
   margin-bottom: 20px;
   display: -ms-flexbox;
   display: flex;
-  font-size: 25px;
-  line-height: 31px;
+  font-size: 22px;
+  line-height: 28px;
   color: rgba(0, 0, 0, 0.5); }
   .contact__line span {
     color: #000;
@@ -1497,7 +1499,7 @@ input:focus {
     line-height: 28px; }
     .history__top a svg {
       margin-right: 11px;
-      margin-top: 3px;
+      height: 10px;
       transition: 0.3s all; }
     .history__top a span {
       margin-left: 6px; }
@@ -1744,27 +1746,28 @@ input:focus {
 .cabinet-povtor {
   margin-top: 5px;
   padding: 10px 0;
+  height: 36px;
   font-weight: bold;
   display: -ms-flexbox;
   display: flex;
+  margin-left: auto;
   -ms-flex-align: center;
       align-items: center;
   cursor: pointer;
   overflow: hidden;
   background-color: #fff; }
   .cabinet-povtor img {
-    margin-right: 14px;
     transition: 0.3s all; }
   .cabinet-povtor span {
-    opacity: 0;
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-    transition: 0.3s all; }
+    width: 0;
+    margin-left: 0;
+    overflow: hidden;
+    transition: 0.3s all;
+    white-space: nowrap; }
 
 .cabinet-povtor:hover span {
-  opacity: 1;
-  -webkit-transform: translateX(0);
-          transform: translateX(0); }
+  width: 109px;
+  margin-left: 14px; }
 
 .cabinet-povtor:hover img {
   -webkit-transform: rotate(180deg);
@@ -1812,9 +1815,8 @@ input:focus {
     padding-left: 0;
     width: 100%; }
   .cabinet-povtor span {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0); } }
+    width: auto;
+    margin-left: 14px; } }
 
 @media (max-width: 767px) {
   .cabinet__price-r {
@@ -1857,8 +1859,7 @@ input:focus {
     font-size: 12px;
     line-height: 15px; }
     .cabinet-povtor img {
-      width: 12px;
-      margin-right: 10px; }
+      width: 12px; }
   .adressa .cabinet__text {
     font-size: 14px;
     line-height: 15px; }
