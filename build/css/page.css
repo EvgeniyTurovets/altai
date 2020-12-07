@@ -1879,3 +1879,7 @@ input:focus {
   .adressa__add {
     font-size: 12px;
     line-height: 15px; } }
+
+.skidka {
+  margin-top: 35px;
+  font-weight: bold; }
