@@ -1,11 +1,11 @@
 
 $(function(){
     if($('#fullpage').length){
-		if($(window).height() > 649 && $(window).width() > 991){
-			$('#fullpage').fullpage({
-                autoScrolling:true
-            });
-		}
+      if($(window).height() > 649 && $(window).width() > 991){
+        $('#fullpage').fullpage({
+                  autoScrolling:true
+              });
+      }
     }
 
 
@@ -83,6 +83,8 @@ $(function(){
       ]
     })
 
+
+    // кабинет
     if($('.cabinet .adressa').length){
 		function adressaAppend(){
 			if( $(window).width() < 768 ){
@@ -95,5 +97,8 @@ $(function(){
 		window.onresize = function(event) {
 			adressaAppend();
 		};
-	}
+  }
+  
+
+  
 })
