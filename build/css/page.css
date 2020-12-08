@@ -570,11 +570,12 @@ p {
 .big-cart__item.video {
   position: relative; }
 
-.big-cart__item.video:after {
-  content: "";
+.video-btn {
+  display: none;
   width: 121px;
   height: 121px;
   position: absolute;
+  z-index: 1;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -820,7 +821,7 @@ p {
     background-size: 50%; }
   .nav-cart .slick-list {
     width: 200px; }
-  .big-cart__item.video:after {
+  .video-btn {
     width: 90px;
     height: 90px;
     background-size: 35px;
@@ -1880,6 +1881,23 @@ input:focus {
     font-size: 12px;
     line-height: 15px; } }
 
+video {
+  overflow: hidden; }
+
+#big-cart-video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: transparent; }
+
 .skidka {
   margin-top: 35px;
   font-weight: bold; }
+
+.video.active .video-btn {
+  display: block;
+  cursor: pointer; }

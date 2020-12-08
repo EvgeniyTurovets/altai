@@ -99,6 +99,24 @@ $(function(){
 		};
   }
   
+  if($('#big-cart-video').length){
+    let video = document.getElementById('big-cart-video');
 
+      video.addEventListener('ended',function(){
+            $('.video').addClass('active')
+      })
+    $('.video').click(function(){
+      if( $('.video.active').length){
+        $('.video').removeClass('active')
+        video.currentTime = 0;
+        video.load();
+      }
+     
+    })
+    
+  }
+
+  
+  
   
 })
