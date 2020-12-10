@@ -99,17 +99,26 @@ $(function(){
 		};
   }
   
-  if($('#big-cart-video').length){
-    let video = document.getElementById('big-cart-video');
+  if($('.big-cart-video').length){
+    let video = $('.big-cart-video');
 
-      video.addEventListener('ended',function(){
-            $('.video').addClass('active')
-      })
+
+    video.on('ended',function(){
+      $(this).closest('.video').addClass('active')
+    });
+    
     $('.video').click(function(){
-      if( $('.video.active').length){
-        $('.video').removeClass('active')
-        video.currentTime = 0;
-        video.load();
+      if( $(this).hasClass('active')){
+        console.log('1')
+        $(this).removeClass('active')
+        let thisVideo = $(this).find('.big-cart-video')
+        thisVideo.currentTime = 0;
+        thisVideo.trigger('play');
+      }
+      else{
+        $(this).addClass('active')
+        let thisVideo = $(this).find('.big-cart-video')
+        thisVideo.trigger('pause');
       }
      
     })
