@@ -1574,11 +1574,16 @@ input:focus{
         margin-bottom: 42px;
     }
 }
+
 @media(max-width: 991px){
-    #map{
+    .map-wrap{
         margin: 0 -30px;
     }
+    #ymap_ctrl_display{
+        display: none!important;
+    }
 }
+
 @media(max-width: 559px){
     .contact__line{
         font-size: 15px;
@@ -1601,7 +1606,7 @@ input:focus{
     
 }
 @media(max-width: 412px){
-    #map{
+    .map-wrap{
         margin: 0 -15px;
     }
 }

@@ -175,8 +175,14 @@
                     </div>
                     
                 </div>
+                <div class="map-wrap" style="position: relative;">
+                    <div id="ymap_ctrl_display" style="display: none; width: 100%; height: 100%; position: absolute; background-color: rgba(0, 0, 0, 0.5); z-index: 100; pointer-events: none;">
 
-                <div id="map" style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/213/moscow/search/%D0%B3.%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%20%D1%83%D0%BB.%20%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D0%9E%D0%9E%D0%9E%20%D0%90%D0%BB%D1%82%D0%B0%D0%B9/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">г. Москва ул. Центральная ООО Алтай в Москве</a><a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Москва</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUA78qkTD" width="100%" height="100%" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                        <div style="position: relative; top: 50%; left: 0; right: 0; color: white; text-align: center; font-size: 1.8em; pointer-events: none;">Чтобы изменить масштаб, прокручивайте карту, удерживая клавишу Ctrl.</div>
+                    </div>
+                    <div id="map"></div>
+                </div>
+                
                 
                 <div class="contact">
                     
@@ -261,5 +267,66 @@
 <script src="./libs/selectric/selectric.min.js"></script>
 <script src="./libs/slick/slick.min.js"></script>
 <script src="./js/main.js"></script>
+
+<script type="text/javascript" src="https://api-maps.yandex.ru/2.1-dev/?lang=ru_RU"></script>
+<script>
+    
+var myMap;
+
+// Дождёмся загрузки API и готовности DOM.
+ymaps.ready(init);
+
+function init () {
+
+            var center = [56, 34];
+
+            var myMap = new ymaps.Map('map', {
+                center: center,
+                zoom: 4,
+                type: 'yandex#map',
+                controls: ['fullscreenControl']
+            });
+            myMap.behaviors.disable('scrollZoom');
+
+var ctrlKey = false;
+var ctrlMessVisible = false;
+var timer;
+
+// Отслеживаем скролл мыши на карте, чтобы показывать уведомление
+myMap.events.add(['wheel', 'mousedown'], function(e) {
+    if (e.get('type') == 'wheel') {
+        if (!ctrlKey) { // Ctrl не нажат, показываем уведомление
+            $('#ymap_ctrl_display').fadeIn(300);
+            ctrlMessVisible = true;
+            clearTimeout(timer); // Очищаем таймер, чтобы продолжать показывать уведомление
+            timer = setTimeout(function() {
+                $('#ymap_ctrl_display').fadeOut(300);
+                ctrlMessVisible = false;
+            }, 1500);
+        }
+        else { // Ctrl нажат, скрываем сообщение
+            $('#ymap_ctrl_display').fadeOut(100);
+        }
+    }
+    if (e.get('type') == 'mousedown' && ctrlMessVisible) { // Скрываем уведомление при клике на карте
+        $('#ymap_ctrl_display').fadeOut(100);
+    }
+});
+
+// Обрабатываем нажатие на Ctrl
+$(document).keydown(function(e) {
+    if (e.which === 17 && !ctrlKey) { // Ctrl нажат: включаем масштабирование мышью
+        ctrlKey = true;
+        myMap.behaviors.enable('scrollZoom');
+    }
+});
+$(document).keyup(function(e) { // Ctrl не нажат: выключаем масштабирование мышью
+    if (e.which === 17) {
+        ctrlKey = false;
+        myMap.behaviors.disable('scrollZoom');
+    }
+});
+}
+</script>
 </body>
 </html>
